@@ -1,0 +1,11 @@
+# PixelSigns.art
+# https://pixelsigns.art/
+
+User-agent: *
+Allow: /
+
+# Block internal maintenance endpoints
+Disallow: /api/
+Disallow: /_nuxt/
+
+Sitemap: https://pixelsigns.art/sitemap.xml

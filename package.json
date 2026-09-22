@@ -1,0 +1,21 @@
+{
+  "name": "pixelsigns-web",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "PixelSigns.art - AI Tools for Work & Learning",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "nuxt": "^3.13.0",
+    "typescript": "^5.6.0",
+    "vue": "^3.5.0",
+    "vue-router": "^4.4.0"
+  }
+}

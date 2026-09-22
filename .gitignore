@@ -1,0 +1,134 @@
+# ============================================================
+#  Node / package manager
+# ============================================================
+node_modules
+.npm
+.pnpm-store
+.pnpm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+.pnp.*
+.pnp.loader.mjs
+
+# Local install caches
+.npm-cache
+.cache
+.parcel-cache
+.eslintcache
+.stylelintcache
+.rsync-cache
+.sass-cache
+
+# ============================================================
+#  Nuxt / Nitro
+# ============================================================
+.nuxt
+.output
+.nitro
+.data
+.vercel-build
+*.tsbuildinfo
+.cache
+
+# ============================================================
+#  Build artefacts (other tooling)
+# ============================================================
+dist
+build
+out
+.turbo
+.tmp
+.idea
+coverage
+*.lcov
+
+# ============================================================
+#  Environment / secrets
+# ============================================================
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+!.env.development.local.example
+.env.development.local
+.env.test.local
+.env.production.local
+*.key
+*.p12
+
+# ============================================================
+#  Logs / process state
+# ============================================================
+*.log
+logs
+*.pid
+*.pid.lock
+
+# ============================================================
+#  IDE / OS files
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# JetBrains
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code (commit history here)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+
+# Sublime / Atom
+*.sublime-project
+*.sublime-workspace
+.project
+.buildpath
+.settings
+
+# ============================================================
+#  Local test / tooling state
+# ============================================================
+coverage/
+playwright-report/
+test-results/
+*.lcov
+*.tgz
+*.tar.gz
+*.zip
+
+# ============================================================
+#  Editor / OS temp dirs
+# ============================================================
+.history
+.idea_modules
+
+# ============================================================
+#  OS / shell history (rare, but safe)
+# ============================================================
+.bash_history
+.zsh_history
+
+# ============================================================
+#  Tool-specific cache (drift+claude+ etc.)
+# ============================================================
+.aider*
+.cody*
+.cursor*
+.cursorignore
+.toDoList

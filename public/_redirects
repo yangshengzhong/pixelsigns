@@ -1,0 +1,32 @@
+# Netlify / Cloudflare Pages redirects for pixelsigns.art.
+# Two rules, single purpose: one hostname, no trailing slash.
+#
+# Format: from  to  code
+# Netlify splat syntax: /:splat captures the wildcard segment.
+# We add an explicit rule per known page so the order is obvious in code review.
+# New pages should be added here AND to server/routes/sitemap.xml.ts.
+
+# -----------------------------------------------------------------------------
+# 1) Trailing-slash 301 -> no-trailing-slash (explicit per page)
+# -----------------------------------------------------------------------------
+/tools/                   /tools                              301
+/guides/                  /guides                             301
+/english-naturalness-checker/  /english-naturalness-checker  301
+/english-level-checker/       /english-level-checker          301
+/prompt-doctor/             /prompt-doctor                    301
+/guides/correct-vs-natural-english/         /guides/correct-vs-natural-english         301
+/guides/how-to-sound-natural-in-english/    /guides/how-to-sound-natural-in-english    301
+/guides/common-unnatural-english-sentences/ /guides/common-unnatural-english-sentences 301
+/about/                   /about               301
+/contact/                 /contact             301
+/editorial-policy/        /editorial-policy    301
+/privacy/                 /privacy             301
+/terms/                   /terms               301
+/disclaimer/              /disclaimer        301
+
+# -----------------------------------------------------------------------------
+# 2) Hostname 301: www.pixelsigns.art -> https://pixelsigns.art
+#    Trailing ! makes the rule "force" — overrides any future page rule.
+# -----------------------------------------------------------------------------
+https://www.pixelsigns.art/*    https://pixelsigns.art/:splat    301!
+http://www.pixelsigns.art/*     https://pixelsigns.art/:splat    301!
