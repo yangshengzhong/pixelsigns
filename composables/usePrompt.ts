@@ -6,7 +6,7 @@ import type {
   PromptTargetModel,
 } from '~/types/prompt'
 
-export type Status = 'idle' | 'loading' | 'success' | 'error' | 'rate_limited'
+export type PromptStatus = 'idle' | 'loading' | 'success' | 'error' | 'rate_limited'
 
 export interface UsePromptOptions {
   defaultTargetModel?: PromptTargetModel
@@ -43,7 +43,7 @@ function writeQuota(q: { used: number; resetAt: number }) {
 }
 
 export function usePrompt(options: UsePromptOptions = {}) {
-  const status = ref<Status>('idle')
+  const status = ref<PromptStatus>('idle')
   const error = ref<string | null>(null)
   const data = ref<PromptResponse | null>(null)
   const lastLatencyMs = ref<number | null>(null)

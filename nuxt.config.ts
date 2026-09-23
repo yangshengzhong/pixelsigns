@@ -41,6 +41,16 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    // Cloudflare Pages deployment preset. Nitro ships this preset
+    // built-in — no separate adapter package required.
+    //   - preset:           emit `.output/public/_worker.js` + `.output/functions/`
+    //                        so Cloudflare Pages can run server/middleware/* and
+    //                        server/routes/* as Pages Functions.
+    //   - platform:         tell the build we run on Cloudflare Workers platform
+    //                        (sets up `process.env` polyfills correctly).
+    preset: 'cloudflare-pages',
+    platform: 'pages',
+
     prerender: {
       crawlLinks: true,
       routes: ['/'],

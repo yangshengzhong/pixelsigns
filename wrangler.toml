@@ -1,0 +1,20 @@
+name = "pixelsigns"
+pages_build_output_dir = ".output/public"
+compatibility_date = "2025-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Build environment variables (mirrors Cloudflare Pages dashboard)
+# These get exposed to the Nitro build via import.meta.env
+[build]
+command = "npm run build"
+
+[vars]
+NUXT_PUBLIC_SITE_URL = "https://pixelsigns.art"
+NUXT_PUBLIC_API_BASE_URL = "https://api.pixelsigns.art"
+
+# Optional: preview deployment env
+[env.preview.vars]
+NUXT_PUBLIC_SITE_URL = "https://preview.pixelsigns.art"
+
+# Disable analytics (we run our own self-hosted analytics, see composables/useAnalytics.ts)
+# analytics = { enabled = false }

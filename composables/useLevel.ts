@@ -5,7 +5,7 @@ import type {
   LevelResponse,
 } from '~/types/level'
 
-export type Status = 'idle' | 'loading' | 'success' | 'error' | 'rate_limited'
+export type LevelStatus = 'idle' | 'loading' | 'success' | 'error' | 'rate_limited'
 
 export interface UseLevelOptions {
   defaultGoal?: LevelGoal
@@ -42,7 +42,7 @@ function writeQuota(q: { used: number; resetAt: number }) {
 }
 
 export function useLevel(options: UseLevelOptions = {}) {
-  const status = ref<Status>('idle')
+  const status = ref<LevelStatus>('idle')
   const error = ref<string | null>(null)
   const data = ref<LevelResponse | null>(null)
   const lastLatencyMs = ref<number | null>(null)
