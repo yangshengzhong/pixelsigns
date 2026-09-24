@@ -181,6 +181,28 @@
       </div>
     </section>
 
+    <section id="ai-writing-feedback" class="container-narrow py-12 sm:py-16">
+      <h2 class="text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl">
+        AI writing feedback designed for English learners
+      </h2>
+      <div class="prose prose-ink mt-4 max-w-none text-ink-700">
+        <p>
+          Most grammar tools tell you whether a sentence is right or wrong. This natural English checker
+          goes further: it acts as an <strong>AI writing feedback</strong> tool that explains
+          <em>why</em> a sentence sounds unnatural and shows you a more natural alternative. That
+          makes it useful as an <strong>ESL writing checker</strong>, an <strong>English writing
+          checker for students</strong>, or anyone who wants more than a red underline.
+        </p>
+        <p>
+          Unlike a generic grammar checker, the naturalness checker also considers tone and clarity.
+          Select a context (casual, work, academic, social media) and the feedback adjusts. In that
+          sense it can also work as a lightweight <strong>English tone checker</strong> and
+          <strong>English clarity checker</strong> — though its primary job is always to answer the
+          question: <em>does this sound natural?</em>
+        </p>
+      </div>
+    </section>
+
     <section id="faq" class="container-narrow py-12 sm:py-16">
       <h2 class="text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl">Frequently asked questions</h2>
       <div class="mt-6 divide-y divide-ink-200 rounded-2xl border border-ink-200 bg-white">
@@ -225,10 +247,10 @@ const context = ref<ContextType>('general')
 useSeoMeta({
   title: 'English Naturalness Checker — Does Your Sentence Sound Natural?',
   description:
-    'Check whether your English sounds natural, not just grammatically correct. Get a natural rewrite, clear explanation, tone feedback, and useful examples.',
+    'Free online English naturalness checker for learners. Paste a sentence and see if it sounds natural, get a natural rewrite, and understand why. Works as a sentence checker, tone checker, and clarity checker — no signup required.',
   ogTitle: 'English Naturalness Checker — Does Your Sentence Sound Natural?',
   ogDescription:
-    'Paste a sentence and see how a fluent English speaker would actually phrase it. Free, no signup, AI-assisted feedback.',
+    'Check whether your English sounds natural, not just grammatically correct. Free sentence naturalness checker with AI-assisted feedback, natural rewrites, and clear explanations.',
   ogImage: `${config.public.siteUrl}/og-image.svg`,
   ogUrl: `${config.public.siteUrl}/english-naturalness-checker`,
   twitterCard: 'summary_large_image',
@@ -247,7 +269,7 @@ useHead({
         applicationCategory: 'EducationalApplication',
         operatingSystem: 'Web',
         description:
-          'Check whether your English sounds natural, not just grammatically correct. Get a natural rewrite, clear explanation, tone feedback, and useful examples.',
+          'Free English naturalness checker for learners. Check if your sentence sounds natural, get a natural rewrite, explanation, and examples. Also works as a tone checker and clarity checker.',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
       }),
     },
@@ -394,6 +416,18 @@ const faqs = [
   {
     q: 'How much text can I check?',
     a: 'The MVP supports short text up to 500 words, but it works best for individual sentences and short paragraphs.',
+  },
+  {
+    q: 'Does this sound natural in English — how do I check quickly?',
+    a: 'Paste your sentence into the checker above. It analyses grammar, word choice, collocations, tone, and context, then tells you whether the sentence sounds natural and suggests a more natural version if needed.',
+  },
+  {
+    q: 'Is this an ESL writing checker?',
+    a: 'Yes. The tool is designed with English learners in mind. It explains why a sentence sounds unnatural and gives examples you can reuse, which makes it useful as an ESL writing checker or English sentence checker for learners.',
+  },
+  {
+    q: 'Can it work as an English tone checker or clarity checker?',
+    a: 'The context selector lets the checker consider register and tone (casual, work, academic, social media). While it is not a dedicated tone checker or clarity checker, the result highlights tone and clarity issues alongside naturalness.',
   },
 ]
 </script>

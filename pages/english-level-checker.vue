@@ -76,6 +76,53 @@
         <li>It is one signal. Use it together with teacher feedback, mock exam results, or the Naturalness Checker for a fuller picture.</li>
       </ul>
     </section>
+
+    <section class="prose-ink mt-12 max-w-none">
+      <h2>How to check your English level with AI</h2>
+      <p>
+        This AI English level checker analyses your writing sample and estimates your CEFR range
+        (A1–C2). Unlike a traditional English level test online free of charge but limited to
+        multiple-choice questions, it looks at your actual sentence complexity, vocabulary diversity,
+        grammar patterns, and coherence. That makes it a more realistic writing level checker than a
+        fixed quiz.
+      </p>
+      <p>
+        You can also use it as an English proficiency checker before registering for an official
+        exam, or as a quick way to check my English level AI-style before a job application,
+        internship, or course enrolment.
+      </p>
+    </section>
+
+    <section class="prose-ink mt-12 max-w-none">
+      <h2>From level estimate to English study plan</h2>
+      <p>
+        Once you know your estimated level, the next question is usually: <em>what should I study
+        next?</em> The result includes three priorities and a 7-day starter plan. If you want a
+        longer roadmap, the same input can be the starting point for an English study plan
+        generator: pick a target level (for example B2), set the time you have each day, and get a
+        personalised English learning plan generator output with weekly milestones.
+      </p>
+      <p>
+        This approach works as a language learning plan generator for self-study learners, and as an
+        English learning schedule generator for anyone who wants structure without committing to a
+        full course.
+      </p>
+    </section>
+
+    <section class="prose-ink mt-12 max-w-none">
+      <h2>Frequently asked questions</h2>
+      <div class="mt-4 divide-y divide-ink-200 rounded-2xl border border-ink-200 bg-white not-prose">
+        <details v-for="faq in faqs" :key="faq.q" class="group p-5 sm:p-6">
+          <summary class="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-ink-900">
+            {{ faq.q }}
+            <svg viewBox="0 0 24 24" class="h-4 w-4 text-ink-400 transition group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-ink-700">{{ faq.a }}</p>
+        </details>
+      </div>
+    </section>
   </article>
 </template>
 
@@ -99,10 +146,10 @@ function onSubmit(submittedText: string, submittedGoal: LevelGoal) {
 useSeoMeta({
   title: 'AI English Level Checker — estimate your CEFR band (A1–C2)',
   description:
-    'Paste 100–500 words of your own writing. Get an AI-assisted CEFR estimate (A1–C2), sub-scores, three priorities and a 7-day starter plan. Free, no signup.',
+    'Free AI English level checker. Paste 100–500 words and get an estimated CEFR band (A1–C2), sub-scores, and a 7-day plan. Works as a writing level checker, English proficiency checker, and CEFR level checker — no signup required.',
   ogTitle: 'AI English Level Checker — estimate your CEFR band',
   ogDescription:
-    'Estimate your CEFR range from your own writing. Sub-scores, three priorities, a 7-day plan. Free, no signup.',
+    'Free AI English level checker. Estimate your CEFR range from your own writing. Sub-scores, three priorities, a 7-day plan. Also works as a writing level checker and English proficiency checker.',
   ogImage: `${config.public.siteUrl}/og-image.svg`,
   ogUrl: `${config.public.siteUrl}/english-level-checker`,
   twitterTitle: 'AI English Level Checker',
@@ -128,7 +175,7 @@ useHead({
         browserRequirements: 'Requires JavaScript',
         inLanguage: 'en',
         description:
-          'Estimates a CEFR band from a 100–500 word writing sample and returns sub-scores, three priorities and a 7-day plan.',
+          'Free AI English level checker. Estimates a CEFR band (A1–C2) from a 100–500 word writing sample. Returns sub-scores, three priorities, and a 7-day plan. Also works as a writing level checker and English proficiency checker.',
         offers: {
           '@type': 'Offer',
           price: 0,
@@ -150,4 +197,35 @@ useHead({
 definePageMeta({
   title: 'AI English Level Checker',
 })
+
+const faqs = [
+  {
+    q: 'How does this AI English level checker work?',
+    a: 'Paste 100–500 words of your own writing. The checker analyses sentence complexity, vocabulary diversity, grammar patterns, and coherence, then estimates your CEFR range (A1–C2) with sub-scores and three priorities.',
+  },
+  {
+    q: 'Is this an official CEFR level checker?',
+    a: 'No. It is an AI-assisted estimate based on your writing sample. It is not an official CEFR, IELTS, TOEFL, or Cambridge certification. Use it as a starting point, not as a final judgment.',
+  },
+  {
+    q: 'Can I use it as an English writing level checker?',
+    a: 'Yes. The tool specifically analyses your writing, so it works well as a writing level checker. It is most accurate when you paste something you wrote yourself, not a textbook excerpt.',
+  },
+  {
+    q: 'Is this an English proficiency checker?',
+    a: 'It gives you an estimate of your English proficiency based on writing. For a full proficiency picture, combine it with speaking and listening assessments.',
+  },
+  {
+    q: 'Can I check my English level AI-style for free?',
+    a: 'Yes. The tool is free, requires no signup, and gives an instant AI-based estimate. There may be a daily cap during launch to keep the service available.',
+  },
+  {
+    q: 'What is the difference between this and an English level test online?',
+    a: 'Traditional English level tests use fixed multiple-choice questions. This checker analyses your actual writing, which gives a more realistic picture of how you use English in practice.',
+  },
+  {
+    q: 'Does it generate an English study plan?',
+    a: 'The result includes three priorities and a 7-day starter plan. For a longer roadmap, you can use the output as input to an English study plan generator.',
+  },
+]
 </script>

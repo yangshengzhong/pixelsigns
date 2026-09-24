@@ -69,6 +69,36 @@
         <li>It is not affiliated with any model vendor. Model-specific tips are general advice, not product guarantees.</li>
       </ul>
     </section>
+
+    <section class="prose-ink mt-12 max-w-none">
+      <h2>How to check your AI prompt</h2>
+      <p>
+        Paste the prompt you would send to ChatGPT, Claude, Gemini, or any other AI model. The
+        Doctor acts as an <strong>AI prompt checker</strong> and <strong>prompt grader</strong>: it
+        scores your prompt on seven dimensions (goal, context, audience, constraints, output format,
+        examples, tone), lists what is missing, and proposes an improved rewrite.
+      </p>
+      <p>
+        You can also use it as a <strong>prompt analyzer</strong> to understand why a prompt
+        produces weak output, or as a <strong>prompt optimizer</strong> to iteratively improve
+        before sending. The diagnostic is the same: find the gaps, then fill them.
+      </p>
+    </section>
+
+    <section class="prose-ink mt-12 max-w-none">
+      <h2>Frequently asked questions</h2>
+      <div class="mt-4 divide-y divide-ink-200 rounded-2xl border border-ink-200 bg-white not-prose">
+        <details v-for="faq in faqs" :key="faq.q" class="group p-5 sm:p-6">
+          <summary class="flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-ink-900">
+            {{ faq.q }}
+            <svg viewBox="0 0 24 24" class="h-4 w-4 text-ink-400 transition group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm leading-relaxed text-ink-700">{{ faq.a }}</p>
+        </details>
+      </div>
+    </section>
   </article>
 </template>
 
@@ -90,17 +120,17 @@ function onSubmit(submittedText: string, submittedTarget: PromptTargetModel) {
 }
 
 useSeoMeta({
-  title: 'Prompt Doctor — diagnose and rewrite your AI prompts',
+  title: 'Prompt Doctor — AI prompt checker, grader & analyzer',
   description:
-    'Score a prompt on goal, context, audience, constraints, output format, examples and tone. Get a health score, missing pieces, and an improved rewrite. Free.',
-  ogTitle: 'Prompt Doctor — diagnose and rewrite AI prompts',
+    'Free AI prompt checker and grader. Paste your prompt, get a health score on goal, context, audience, constraints, output format, examples and tone, plus an improved rewrite. Works as a prompt analyzer and prompt optimizer — no signup.',
+  ogTitle: 'Prompt Doctor — AI prompt checker, grader & analyzer',
   ogDescription:
-    'A free diagnostic for AI prompts. Scores goal, context, audience, constraints, output format, examples and tone. Proposes an improved rewrite.',
+    'Free AI prompt checker. Score your prompt on 7 dimensions, find what is missing, and get an improved rewrite. Also works as a prompt analyzer and prompt optimizer.',
   ogImage: `${config.public.siteUrl}/og-image.svg`,
   ogUrl: `${config.public.siteUrl}/prompt-doctor`,
-  twitterTitle: 'Prompt Doctor',
+  twitterTitle: 'Prompt Doctor — AI Prompt Checker',
   twitterDescription:
-    'Score an AI prompt, find what is missing, and get an improved rewrite.',
+    'Score an AI prompt, find what is missing, and get an improved rewrite. Free prompt checker and grader.',
   twitterImage: `${config.public.siteUrl}/og-image.svg`,
   twitterCard: 'summary_large_image',
   canonical: `${config.public.siteUrl}/prompt-doctor`,
@@ -121,7 +151,7 @@ useHead({
         browserRequirements: 'Requires JavaScript',
         inLanguage: 'en',
         description:
-          'Diagnoses AI prompts on goal, context, audience, constraints, output format, examples and tone, and proposes an improved rewrite.',
+          'Free AI prompt checker and grader. Diagnoses prompts on goal, context, audience, constraints, output format, examples and tone. Proposes an improved rewrite. Also works as a prompt analyzer and prompt optimizer.',
         offers: {
           '@type': 'Offer',
           price: 0,
@@ -143,4 +173,35 @@ useHead({
 definePageMeta({
   title: 'Prompt Doctor',
 })
+
+const faqs = [
+  {
+    q: 'What is a prompt checker?',
+    a: 'A prompt checker analyses an AI prompt before you send it. It scores clarity, context, constraints, and other dimensions, then shows what is missing so you can improve the prompt.',
+  },
+  {
+    q: 'How is this different from a prompt generator?',
+    a: 'A prompt generator writes a prompt for you. The Prompt Doctor diagnoses why your prompt is weak before rewriting it — so you learn the pattern, not just copy the output.',
+  },
+  {
+    q: 'Can I use it as a prompt grader?',
+    a: 'Yes. The Doctor gives each prompt a health score out of 100, plus sub-scores on goal, context, audience, constraints, output format, examples, and tone.',
+  },
+  {
+    q: 'Does it work as a prompt analyzer for any AI model?',
+    a: 'Yes. The diagnostic is model-agnostic. You can also select a target model (ChatGPT, Claude, Gemini, or general) and the Doctor adds a small model-specific note.',
+  },
+  {
+    q: 'Can I use it as a prompt optimizer?',
+    a: 'Yes. Paste a prompt, read the diagnostic, adjust, and paste again. Each iteration should raise the health score and fill more of the missing dimensions.',
+  },
+  {
+    q: 'Is this prompt checker free?',
+    a: 'Yes. The tool is free, requires no signup, and runs in the browser. There may be a daily cap during launch.',
+  },
+  {
+    q: 'How do I check my AI prompt quickly?',
+    a: 'Paste the prompt into the field above and click submit. The Doctor returns a health score, missing pieces, and an improved rewrite in seconds.',
+  },
+]
 </script>

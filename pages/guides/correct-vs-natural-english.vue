@@ -118,13 +118,13 @@ const slug = 'correct-vs-natural-english'
 useSeoMeta({
   title: 'Correct vs natural English — what the difference actually is',
   description:
-    'A short guide on the gap between grammar rules and native-style English, with three example sentences, when to optimise for which, and a 4-step practice routine.',
+    'Correct but unnatural English is a common problem for learners. This guide explains the gap between grammar rules and natural English, with examples, a comparison table, and a practice routine. Pairs with the free English Naturalness Checker.',
   ogTitle: 'Correct vs natural English',
-  ogDescription: 'A plain-English guide on the gap between grammar and native-style choices.',
+  ogDescription: 'A plain-English guide on correct but unnatural English — the gap between grammar and native-style choices.',
   ogImage: `${config.public.siteUrl}/og-image.svg`,
   ogUrl: `${config.public.siteUrl}/guides/${slug}`,
   twitterTitle: 'Correct vs natural English',
-  twitterDescription: 'A plain-English guide on the gap between grammar and native-style choices.',
+  twitterDescription: 'A plain-English guide on correct but unnatural English.',
   twitterImage: `${config.public.siteUrl}/og-image.svg`,
   twitterCard: 'summary_large_image',
   canonical: `${config.public.siteUrl}/guides/${slug}`,

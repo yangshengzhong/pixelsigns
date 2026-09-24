@@ -8,10 +8,10 @@
             Useful AI Tools for Work &amp; Learning
           </p>
           <h1 class="mt-6 text-4xl font-bold tracking-tight text-ink-900 sm:text-5xl lg:text-6xl">
-            Write, learn, and decide — with tools that actually help.
+            Free AI tools for English writing, learning &amp; prompts
           </h1>
           <p class="mt-5 max-w-2xl text-lg leading-relaxed text-ink-600">
-            PixelSigns builds practical AI-powered tools that help you create, analyze, learn, and make better decisions faster.
+            PixelSigns builds practical AI-powered tools that help you write natural English, check your CEFR level, and improve your AI prompts.
             No signup walls, no fluff.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
@@ -148,12 +148,12 @@
 <script setup lang="ts">
 const config = useRuntimeConfig()
 useSeoMeta({
-  title: 'PixelSigns — AI Tools for Work & Learning',
+  title: 'PixelSigns — Free AI Tools for English Writing & Learning',
   description:
-    'Practical AI-powered tools that help you create, analyze, learn and make decisions faster. Try the English Naturalness Checker, free and without signup.',
-  ogTitle: 'PixelSigns — AI Tools for Work & Learning',
+    'Free AI tools for English writing and learning: English Naturalness Checker, AI English Level Checker, and Prompt Doctor. Check your English, estimate your CEFR level, and improve your AI prompts. No signup required.',
+  ogTitle: 'PixelSigns — Free AI Tools for English Writing & Learning',
   ogDescription:
-    'Practical AI-powered tools that help you create, analyze, learn and make decisions faster.',
+    'Free AI tools for English writing and learning. Naturalness checker, CEFR level checker, prompt doctor. No signup required.',
   ogImage: `${config.public.siteUrl}/og-image.svg`,
   ogUrl: config.public.siteUrl,
   twitterCard: 'summary_large_image',
@@ -170,7 +170,7 @@ useHead({
         name: 'PixelSigns',
         url: config.public.siteUrl,
         description:
-          'Practical AI-powered tools that help you create, analyze, learn and make decisions faster.',
+          'Free AI tools for English writing and learning: English Naturalness Checker, AI English Level Checker (CEFR), and Prompt Doctor.',
       }),
     },
   ],

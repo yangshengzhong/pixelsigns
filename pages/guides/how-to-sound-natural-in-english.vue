@@ -112,9 +112,9 @@ const slug = 'how-to-sound-natural-in-english'
 useSeoMeta({
   title: 'How to sound natural in English — a practical guide',
   description:
-    'Four patterns (collocations, hedge phrases, contractions, filler) and a 5-step weekly routine to write in natural English without pretending to be a native.',
+    'Want to make your English sound natural? Four patterns (collocations, hedge phrases, contractions, filler) and a 5-step weekly routine to write in natural English without pretending to be a native. Try the free Naturalness Checker to practise.',
   ogTitle: 'How to sound natural in English',
-  ogDescription: 'Four patterns and a 5-step weekly routine to write in natural English.',
+  ogDescription: 'Four patterns and a 5-step weekly routine to make your English sound natural.',
   ogImage: `${config.public.siteUrl}/og-image.svg`,
   ogUrl: `${config.public.siteUrl}/guides/${slug}`,
   twitterTitle: 'How to sound natural in English',

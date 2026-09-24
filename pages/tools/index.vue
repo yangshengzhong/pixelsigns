@@ -3,11 +3,10 @@
     <header class="mb-8 space-y-3">
       <p class="text-xs font-semibold uppercase tracking-wider text-accent-600">Tools · Index</p>
       <h1 class="text-3xl font-bold text-ink-900 sm:text-4xl">
-        Free tools for clearer, more natural writing
+        Free English writing tools &amp; AI prompt checker
       </h1>
       <p class="text-base text-ink-700">
-        Pick the tool that fits the moment. No accounts, no email gate,
-        no upsells mid-check.
+        Pick the tool that fits the moment: check if your English sounds natural, estimate your CEFR level, or diagnose your AI prompt. No accounts, no email gate, no upsells mid-check.
       </p>
     </header>
 
@@ -85,15 +84,15 @@ const tools = [
 ]
 
 useSeoMeta({
-  title: 'Tools — free writing diagnostics from PixelSigns',
+  title: 'Tools — free English writing & AI prompt tools from PixelSigns',
   description:
-    'A small, focused set of free writing tools: naturalness checker, CEFR estimator, prompt doctor. No signup, no email gate.',
-  ogTitle: 'PixelSigns Tools',
-  ogDescription: 'Free writing diagnostics from PixelSigns.',
+    'A small set of free writing tools: English Naturalness Checker, AI English Level Checker (CEFR estimator), and Prompt Doctor (AI prompt checker & grader). No signup, no email gate.',
+  ogTitle: 'PixelSigns Tools — free English writing & prompt tools',
+  ogDescription: 'Free English writing diagnostics and AI prompt tools from PixelSigns.',
   ogImage: `${config.public.siteUrl}/og-image.svg`,
   ogUrl: `${config.public.siteUrl}/tools`,
   twitterTitle: 'PixelSigns Tools',
-  twitterDescription: 'Free writing diagnostics from PixelSigns.',
+  twitterDescription: 'Free English writing diagnostics and AI prompt tools from PixelSigns.',
   twitterImage: `${config.public.siteUrl}/og-image.svg`,
   twitterCard: 'summary_large_image',
   canonical: `${config.public.siteUrl}/tools`,

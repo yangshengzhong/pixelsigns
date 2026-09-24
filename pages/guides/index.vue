@@ -68,9 +68,9 @@ const guides = [
 useSeoMeta({
   title: 'Guides — writing in clear, natural English',
   description:
-    'Short, opinionated readings on the everyday writing decisions behind clear, natural English: correct vs natural, common patterns, and a weekly routine.',
+    'Short guides on how to sound natural in English, the difference between correct and natural English, and common unnatural English sentences. Each guide pairs with the free English Naturalness Checker for practice.',
   ogTitle: 'Guides — clear, natural English',
-  ogDescription: 'Plain-English guides for everyday writing decisions.',
+  ogDescription: 'Plain-English guides for everyday writing decisions: correct vs natural, common patterns, and a weekly routine.',
   ogImage: `${config.public.siteUrl}/og-image.svg`,
   ogUrl: `${config.public.siteUrl}/guides`,
   twitterTitle: 'Guides — clear, natural English',

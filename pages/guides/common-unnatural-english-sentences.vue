@@ -152,7 +152,7 @@ const slug = 'common-unnatural-english-sentences'
 useSeoMeta({
   title: '20 sentences that sound unnatural even when grammatically correct',
   description:
-    'A list of 20 common ESL patterns that pass grammar checks but trip native readers, with a natural alternative for each one.',
+    'A list of 20 common unnatural English sentences that pass grammar checks but trip native readers. Each example has a natural alternative and an explanation. Useful as a reference for ESL learners and English sentence checker practice.',
   ogTitle: '20 sentences that sound unnatural',
   ogDescription: '20 common ESL patterns and their natural alternatives.',
   ogImage: `${config.public.siteUrl}/og-image.svg`,
